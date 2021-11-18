@@ -10,6 +10,6 @@
     "vmware_base_vmx_data_numvcpus"                         : "2",
     "puppet_aio"                                            : "http://yum.puppet.com/puppet7/el/8/x86_64/puppet-agent-7.10.0-1.el8.x86_64.rpm",
     "inject_http_seed_in_boot_command"                      : "true",
-    "boot_command"                                          : "<tab> <wait>inst.text inst.ks=http://%s/ks.cfg<wait><enter>",
+    "boot_command"                                          : "<tab> <wait>inst.text inst.ks=https://gist.githubusercontent.com/Dorin-Pleava/ee965c9b188a96da87cdfbe8b6a6ce8b/raw/df2b9e3615b1ecc5351ad9f034977afdc01cca93/ks.cfg<wait><enter>",
     "iso_name"                                              : "rhel-baseos-9.0-beta-0-x86_64-dvd.iso"
 }
