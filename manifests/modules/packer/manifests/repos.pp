@@ -27,8 +27,6 @@ class packer::repos {
     $base_url = $::operatingsystemmajrelease ? {
       '8' => "${repo_mirror}/rpm__remote_rhel-8",
       '7' => "${repo_mirror}/rpm__remote_rhel-7",
-      '6' => "${repo_mirror}/rpm__remote_rhel-68-${::architecture}",
-      '5' => "${os_mirror}/rhel50server-${::architecture}/RPMS.all"
     }
 
     if $facts['operatingsystemmajrelease'] == '8' {
@@ -44,27 +42,6 @@ class packer::repos {
         baseurl  => "${base_url}-appstream",
         gpgcheck => '1',
         gpgkey   => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-beta,file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release'
-      }
-    } elsif $facts['operatingsystemmajrelease'] == '5' {
-      yumrepo { 'localmirror-os':
-        descr    => 'localmirror-os',
-        baseurl  => "${base_url}/os",
-        gpgcheck => '1',
-        gpgkey   => "file:///etc/pki/rpm-gpg/${gpgkey}"
-      }
-
-      yumrepo { 'localmirror-optional':
-        descr    => 'localmirror-optional',
-        baseurl  => "${base_url}/optional",
-        gpgcheck => '1',
-        gpgkey   => "file:///etc/pki/rpm-gpg/${gpgkey}"
-      }
-
-      yumrepo { 'localmirror-extras':
-        descr    => 'localmirror-extras',
-        baseurl  => "${base_url}/extras",
-        gpgcheck => '1',
-        gpgkey   => "file:///etc/pki/rpm-gpg/${gpgkey}"
       }
     } else {
 

@@ -5,7 +5,7 @@
 class packer::vsphere::fw {
 
   if ($facts['osfamily'] == 'RedHat')
-  and ($facts['operatingsystemmajrelease'] in ['6', '7']) {
+  and ($facts['operatingsystemmajrelease'] == '7') {
     class { 'firewall':
       ensure => stopped,
     }

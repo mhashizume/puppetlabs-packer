@@ -108,12 +108,10 @@ class packer::vsphere::repos(
 
       if $facts['operatingsystem'] == 'RedHat' {
         # We don't have consistent mirror urls between RedHat versions:
-        # TODO: RHEL 5 needs further refactoring
         $base_url = $facts['operatingsystemmajrelease'] ? {
           '8' => "${repo_mirror}/rpm__remote_rhel-8",
           '7' => "${repo_mirror}/rpm__remote_rhel-7",
-          '6' => "${repo_mirror}/rpm__remote_rhel-68-${::architecture}",
-          '5' => "${os_mirror}/rhel50server-${::architecture}/RPMS.all"
+
         }
       } else {
         $base_url = $facts['operatingsystem'] ? {
