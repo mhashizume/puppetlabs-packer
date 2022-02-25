@@ -8,7 +8,7 @@
     "install_xcode_cli_tools"             : "true",
     "beakerhost"                          : "osx12-64",
     "template_name"                       : "macos-12-x86_64",
-    "_comment"                            : "template_os below is for 10.14, darwin20 should be used for catalina when it becomes available in the API",
+    "_comment"                            : "template_os below is for 10.14, darwin20 should be used for catalina when it becomes available in the vSphere API",
     "template_os"                         : "darwin18_64Guest",
     "version"                             : "0.0.1",
     "vmware_base_boot_wait"               : "4m",
