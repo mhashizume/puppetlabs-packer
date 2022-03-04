@@ -10,7 +10,7 @@
   "floppy_dirs"                                                 : "", 
   "puppet_aio"                                                  : "https://downloads.puppetlabs.com/mac/puppet6/10.12/x86_64/puppet-agent-latest.dmg",
   "pc_repo"                                                     : "",
-  "http_directory"                                              : "../common/files",
+  "http_directory"                                              : "../../common/files",
   "vmware_vsphere_nocm_required_modules"                        : "puppetlabs-stdlib",
   "vmware_vsphere_nocm_vmx_data_numvcpus"                       : "2",
   "vmware_vsphere_nocm_vmx_data_memsize"                        : "4096",  
